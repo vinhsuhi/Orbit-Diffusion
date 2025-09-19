@@ -20,7 +20,7 @@ bash run.sh <dataset> <number-of-transition> <wn_noise>
 -  `number-of-transition`: the number of transitions
 -  `wn_noise`: `True` for Wrapped Normal (WN), `False` for Uniform (U)
     - For baseline runs, set `number-of-transition`=0 and `wn_noise` is ignored.
-The model, logs, and outputs will be saved in `./singlerun/YYYY-MM-DD/${dataset}_trans${num_trans}_[U or WN]_YY-MM-DD-HH-MM-SS` for OrbDiff and `./singlerun/YYYY-MM-DD/${dataset}_baseline_YY-MM-DD-HH-MM-SS` for baseline.
+The model, logs, and outputs will be saved in `./singlerun/yyyy-mm-dd/${dataset}_trans${num_trans}_[U or WN]_yy-mm-dd-HH-MM-SS` for OrbDiff and `./singlerun/yyyy-mm-dd/${dataset}_baseline_yy-mm-dd-HH-MM-SS` for baseline.
 
 #### Example runs
 - OrbDiff:

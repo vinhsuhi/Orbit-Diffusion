@@ -12,6 +12,8 @@ DiffCSP/singlerun
 TGDMat/csp_task/gen*/
 TGDMat/csp_task/out*/
 TGDMat/csp_task/wandb/
+TGDMat/csp_task/mp_20/
+TGDMat/csp_task/perov_5/
 *pbz2
 # Byte-compiled / optimized / DLL files
 __pycache__/
