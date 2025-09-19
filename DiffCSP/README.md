@@ -17,11 +17,24 @@ To train the model, run:
 bash run.sh <dataset> <number-of-transition> <wn_noise>
 ```
 -  `dataset`: `perov_5` or `mp_20`
--  `number-of-transition`: 1000 - the number of transitions
+-  `number-of-transition`: the number of transitions
 -  `wn_noise`: `True` for Wrapped Normal (WN), `False` for Uniform (U)
+    - For baseline runs, set `number-of-transition`=0 and `wn_noise` is ignored.
+The model, logs, and outputs will be saved in `./singlerun/YYYY-MM-DD/${dataset}_trans${num_trans}_[U or WN]_YY-MM-DD-HH-MM-SS` for OrbDiff and `./singlerun/YYYY-MM-DD/${dataset}_baseline_YY-MM-DD-HH-MM-SS` for baseline.
 
-The model, logs, and outputs will be saved in `./singlerun/YYYY-MM-DD/${dataset}_trans${num_trans}_[U or WN]_YY-MM-DD-HH-MM-SS`
-Pre-trained checkpoints are provided [here]().
+#### Example runs
+- OrbDiff:
+```
+# Wrapped Normal noise
+bash run.sh perov_5 1000 True
+# Uniform noise
+bash run.sh perov_5 1000 False
+```
+- Baseline:
+```
+bash run.sh perov_5 0
+``` 
+Our pre-trained OrbDiff checkpoints are provided [here]().
 
 ### 📊 Evaluation
 To evaluate a trained model, run:

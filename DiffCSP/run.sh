@@ -22,19 +22,33 @@ wn_noise=$3
 # Convert new_noise to lowercase for case-insensitive comparison
 wn_noise_lower=$(echo "$wn_noise" | tr '[:upper:]' '[:lower:]')
 
-# Determine shift_C and construct expname based on new_noise
-if [[ "$wn_noise_lower" == "true" ]]; then
-    expname="${dataset}_trans${n_trans}_WN_$(date "+%y-%m-%d-%H-%M-%S")"
+# Determine expname
+if [[ "$n_trans" -eq 0 ]]; then
+    expname="${dataset}_baseline_$(date "+%y-%m-%d-%H-%M-%S")"
 else
-    expname="${dataset}_trans${n_trans}_U_$(date "+%y-%m-%d-%H-%M-%S")"
+    if [[ "$wn_noise_lower" == "true" ]]; then
+        expname="${dataset}_trans${n_trans}_WN_$(date "+%y-%m-%d-%H-%M-%S")"
+    else
+        expname="${dataset}_trans${n_trans}_U_$(date "+%y-%m-%d-%H-%M-%S")"
+    fi
 fi
 
 
 echo ${expname}
 today=$(date "+%Y-%m-%d")
+
 # Run the Python script
-python diffcsp/run.py data=${dataset} \
-    expname=${expname} \
-    data.n_perm=0 data.n_pos=1 +model.num_trans=${n_trans} \
-    data.include_identity=True +model.include_identity=True \
-    +model.new_noise=${wn_noise}
+if [[ "$n_trans" -eq 0 ]]; then
+    # Baseline run
+    python diffcsp/run.py data=${dataset} \
+        expname=${expname} \
+        data.n_perm=0 data.n_pos=1 \
+        data.include_identity=True +model.include_identity=True
+else
+    # Our method
+    python diffcsp/run.py data=${dataset} \
+        expname=${expname} \
+        data.n_perm=0 data.n_pos=1 +model.num_trans=${n_trans} \
+        data.include_identity=True +model.include_identity=True \
+        +model.new_noise=${wn_noise}
+fi
