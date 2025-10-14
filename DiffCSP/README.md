@@ -34,7 +34,7 @@ bash run.sh perov_5 1000 False
 ```
 bash run.sh perov_5 0
 ``` 
-Our pre-trained OrbDiff checkpoints are provided [here]().
+Our pre-trained OrbDiff checkpoints are provided [here](https://drive.google.com/drive/folders/19sxkwaMlOBw3xaDOis3igSpVnmnVPSru?usp=sharing).
 
 ### 📊 Evaluation
 To evaluate a trained model, run:

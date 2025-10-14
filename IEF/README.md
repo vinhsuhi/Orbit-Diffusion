@@ -1,32 +1,22 @@
-
-  
-
 # OrbDiff for ETFlow
-
 Implementation of **OrbDiff** adapted for [Equivariant Flow Matching for Molecule Conformer Generation](https://arxiv.org/abs/2410.22388).
 
 ---
 
 ### 🚀 Dependencies and Setup
-
 Please refer to the original [ETFlow repository](https://github.com/shenoynikhil/ETFlow).
 
-
 ### 📦 Training Data
-
 Training data preparation follows the same process as described in the [ETFlow repository](https://github.com/shenoynikhil/ETFlow).
 
-
-
 ### 🔧 Training
-
-Please make sure you have exported `DATA_DIR` in the previous step.
+Please make sure you have exported `DATA_DIR` in the previous step. 
+This implementation fine-tunes the pre-trained ETFlow model.  
+Please download the pre-trained checkpoint `qm9-o3.ckpt` from [Zenodo](https://zenodo.org/records/14226681) and place it in the `./pretrained` directory.
 To train the model, run:
 
 ```
-
 bash run.sh configs/qm9-o3.yaml <training-mode> [<number-of-rotation> <number-of-permutation>]
-
 ```
 
 - `training-mode`: `baseline` (without OrbDiff) or `ief` (with OrbDiff)
@@ -48,12 +38,10 @@ bash run.sh configs/qm9-o3.yaml ief 200 50
 - Baseline:
 
 ```
-
 bash run.sh configs/qm9-o3.yaml baseline
-
 ```
 
-Our pre-trained OrbDiff checkpoints are provided [here]().
+Our pre-trained OrbDiff checkpoints are provided [here](https://drive.google.com/drive/folders/1OLgCh1zfIvp94M8NCUo6RKO6VTUZfn0_?usp=sharing).
 
   
 
