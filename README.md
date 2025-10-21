@@ -23,7 +23,7 @@ This work reframes augmentation-based training as a Monte Carlo gradient estimat
 Orbit-Diffusion/
 ├── 1D-toy/              # Toy experiments
 ├── DiffCSP/             # Crystal structure prediction experiments
-├── IEF/                 # Core estimator code
+├── IEF/                 # ETFlow + OrbDiff
 ├── TGDMat/              # Dataset / tools
 ├── requirements.txt
 └── README.md            # This file
