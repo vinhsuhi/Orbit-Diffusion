@@ -2,7 +2,7 @@
 **Accepted at NeurIPS 2025**  
 
 Implementation of *“Rao-Blackwell Gradient Estimators for Equivariant Denoising Diffusion”*  
-**Vinh Tong**, Trung-Dung Hoang, Anji Liu, Guy Van den Broeck, Mathias Niepert  
+Vinh Tong, Trung-Dung Hoang, Anji Liu, Guy Van den Broeck, Mathias Niepert  
 [arXiv:2502.09890v4](https://arxiv.org/abs/2502.09890)
 
 
