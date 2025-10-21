@@ -24,7 +24,7 @@ Each subfolder contains its own **README** and **environment setup**.
 ## Citation 
 
 ```
-@inproceedings{tong2024learning,
+@inproceedings{tong2025raoblackwell,
   title     = {Rao-Blackwell Gradient Estimators for Equivariant Denoising Diffusion},
   author    = {Tong, Vinh and Hoang, Trung-Dung and Liu, Anji and Van den Broeck, Guy and Niepert, Mathias},
   booktitle = {Proceedings of the 39th Conference on Neural Information Processing Systems},
