@@ -18,13 +18,16 @@ This work reframes augmentation-based training as a Monte Carlo gradient estimat
 - Empirical results showing improved performance on tasks such as molecular conformation generation (GEOM-QM9), crystal structure prediction (Perov-5, MP-20), and protein generation.  
 
 ## Repository Structure  
+
+```bash
 Orbit-Diffusion/
-├── 1D-toy/ # Toy experiments
-├── DiffCSP/ # Crystal structure prediction experiments
-├── IEF/ # Core estimator code
-├── TGDMat/ # Dataset / tools
+├── 1D-toy/              # Toy experiments
+├── DiffCSP/             # Crystal structure prediction experiments
+├── IEF/                 # Core estimator code
+├── TGDMat/              # Dataset / tools
 ├── requirements.txt
-└── README.md # This file
+└── README.md            # This file
+
 
 Each subfolder contains its own **README** and **environment setup**.  
 ➡️ **Please go into each subfolder and follow its specific installation instructions** before running experiments.
