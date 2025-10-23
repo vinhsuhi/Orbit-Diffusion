@@ -1,4 +1,4 @@
-# Orbit-Diffusion (Neurips 2025)
+# Orbit-Diffusion (NeurIPS 2025)
 **Accepted at NeurIPS 2025**  
 
 Implementation of *“Rao-Blackwell Gradient Estimators for Equivariant Denoising Diffusion”*  
